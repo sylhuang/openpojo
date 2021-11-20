@@ -18,6 +18,9 @@
 
 package com.openpojo.reflection.impl.sample.classes;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * @author oshoukry
  */
@@ -43,6 +46,8 @@ public class PojoFieldImplClass {
   public transient String transientString;
 
   public volatile String volatileString;
+
+  @Getter @Setter private String lombokString;
 
   /**
    * @return the nonStaticNonFinal

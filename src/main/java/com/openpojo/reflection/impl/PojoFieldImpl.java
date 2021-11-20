@@ -84,6 +84,12 @@ class PojoFieldImpl implements PojoField {
   }
 
   public boolean hasGetter() {
+    Annotation[] annotations = field.getAnnotations();
+    for (Annotation annotation : annotations) {
+      if (annotation.annotationType().getPackage().getName() == "lombok" && annotation.annotationType().getName() == "Getter") {
+        return true;
+      }
+    }
     return fieldGetter != null;
   }
 
@@ -102,6 +108,12 @@ class PojoFieldImpl implements PojoField {
   }
 
   public boolean hasSetter() {
+    Annotation[] annotations = field.getAnnotations();
+    for (Annotation annotation : annotations) {
+      if (annotation.annotationType().getPackage().getName() == "lombok" && annotation.annotationType().getName() == "Setter") {
+        return true;
+      }
+    }
     return fieldSetter != null;
   }
 
