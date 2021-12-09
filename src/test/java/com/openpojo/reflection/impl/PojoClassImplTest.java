@@ -471,4 +471,10 @@ public class PojoClassImplTest {
   private static PojoClass getPojoClassImplForClass(final Class<?> clazz) {
     return PojoClassFactory.getPojoClass(clazz);
   }
+
+  @Test
+  public void testEnumClass() {
+    PojoClass anEnumClass = getPojoClassImplForClass(AnEnum.class);
+    Affirm.affirmFalse("Class isn't synthetic", anEnumClass.isSynthetic());
+  }
 }

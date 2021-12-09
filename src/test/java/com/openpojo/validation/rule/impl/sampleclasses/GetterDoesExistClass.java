@@ -17,6 +17,8 @@
  */
 
 package com.openpojo.validation.rule.impl.sampleclasses;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author oshoukry
@@ -29,6 +31,7 @@ public final class GetterDoesExistClass {
   private final String privateFinalString = "Some String";
   private String privateString;
   private static String privateStaticString = "Some String";
+  @Getter @Setter private String lombokString;
 
   /**
    * @return the privateFinalString

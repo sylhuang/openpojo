@@ -16,9 +16,7 @@
  * limitations under the License.
  */
 
-package com.openpojo.reflection.impl.sample.classes;
-
-import java.awt.*;
+package com.openpojo.validation.rule.impl.sampleclasses;
 
 /**
  * @author oshoukry
@@ -31,7 +29,7 @@ public enum AnEnum {
   private final int priority;
   private final String enumValue;
 
-  private AnEnum( String enumValue, int priority )
+  private AnEnum(String enumValue, int priority )
   {
     this.enumValue = enumValue;
     this.priority = priority;

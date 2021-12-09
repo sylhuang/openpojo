@@ -72,6 +72,9 @@ public class InstanceFactory {
   public static Object getInstance(final PojoClass pojoClass, final Object... parameters) {
     if (pojoClass.isAbstract())
       return doGetInstance(wrapAbstractClass(pojoClass), parameters);
+    if (pojoClass.isEnum()) {
+      return doGetEnumInstance(pojoClass);
+    }
     return doGetInstance(pojoClass, parameters);
   }
 
@@ -105,6 +108,10 @@ public class InstanceFactory {
 
   private static PojoClass wrapAbstractClass(final PojoClass pojoClass) {
     return PojoClassFactory.getPojoClass(ByteCodeFactory.getSubClass(pojoClass.getClazz()));
+  }
+
+  private static Object doGetEnumInstance(PojoClass pojoClass) {
+    return Enum.valueOf((Class < ? extends Enum > ) pojoClass.getClazz(), "ENUMONE");
   }
 
   private static Object doGetInstance(PojoClass pojoClass, Object[] parameters) {
