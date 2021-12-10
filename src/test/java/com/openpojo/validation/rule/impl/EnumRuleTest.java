@@ -10,6 +10,12 @@ import org.junit.Test;
 
 import static com.openpojo.reflection.java.bytecode.asm.SubClassDefinition.GENERATED_CLASS_POSTFIX;
 
+/**
+* CS427 Issue link: https://github.com/OpenPojo/openpojo/issues/105
+*
+* @auther qianyu huang
+**/
+
 public class EnumRuleTest {
     private Class<?>[] passClasses = new Class<?>[] { AnEnum.class };
     private Rule rule = new GetterMustExistRule();

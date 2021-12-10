@@ -19,7 +19,9 @@
 package com.openpojo.validation.rule.impl.sampleclasses;
 
 /**
- * @author oshoukry
+ * CS427 Issue link: https://github.com/OpenPojo/openpojo/issues/105
+ *
+ * @author qianyu huang
  */
 public enum AnEnum {
   ENUMONE( "1", 1 ),

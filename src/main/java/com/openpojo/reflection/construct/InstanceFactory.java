@@ -110,6 +110,13 @@ public class InstanceFactory {
     return PojoClassFactory.getPojoClass(ByteCodeFactory.getSubClass(pojoClass.getClazz()));
   }
 
+  /**
+   * This method returns a new instance using the Enum value of the first field
+   *
+   * @param pojoClass
+   *     The pojoClass to instantiate.
+   * @return a newly created instance of the enum class represented in the pojoClass.
+   */
   private static Object doGetEnumInstance(PojoClass pojoClass) {
     return Enum.valueOf((Class < ? extends Enum > ) pojoClass.getClazz(), "ENUMONE");
   }

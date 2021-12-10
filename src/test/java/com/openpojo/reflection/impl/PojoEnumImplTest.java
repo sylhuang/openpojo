@@ -36,7 +36,9 @@ import java.util.List;
  */
 
 /**
- * @author oshoukry
+ * CS427 Issue link: https://github.com/OpenPojo/openpojo/issues/105
+ *
+ * @author qianyu huang
  */
 public class PojoEnumImplTest {
     private PojoClass pojoClass = PojoClassFactory.getPojoClass(AnEnum.class);

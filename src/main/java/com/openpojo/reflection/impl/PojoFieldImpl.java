@@ -83,6 +83,11 @@ class PojoFieldImpl implements PojoField {
     }
   }
 
+  /**
+   * CS427 Issue link: https://github.com/OpenPojo/openpojo/issues/93
+   *
+   * @auther qianyu huang
+   **/
   public boolean hasGetter() {
     Annotation[] annotations = field.getAnnotations();
     for (Annotation annotation : annotations) {
@@ -107,6 +112,11 @@ class PojoFieldImpl implements PojoField {
 
   }
 
+  /**
+   * CS427 Issue link: https://github.com/OpenPojo/openpojo/issues/93
+   *
+   * @auther qianyu huang
+   **/
   public boolean hasSetter() {
     Annotation[] annotations = field.getAnnotations();
     for (Annotation annotation : annotations) {

@@ -21,7 +21,9 @@ package com.openpojo.reflection.impl.sample.classes;
 import java.awt.*;
 
 /**
- * @author oshoukry
+ * CS427 Issue link: https://github.com/OpenPojo/openpojo/issues/105
+ *
+ * @author qianyu huang
  */
 public enum AnEnum {
   ENUMONE( "1", 1 ),
